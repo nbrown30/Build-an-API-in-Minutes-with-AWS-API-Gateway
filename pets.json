@@ -1,0 +1,64 @@
+{
+    "pets": [
+        {
+            "id": "7c041612-0ea9-43b2-ad7c-87d63bef33ce",
+            "name": "Marcel",
+            "species": "dog",
+            "breed": "French bulldog"
+        },
+        {
+            "id": "55677748-07ae-4926-afdf-4fbc66b868b3",
+            "name": "Duncan",
+            "species": "dog",
+            "breed": "West Highland Terrier"
+        },
+        {
+            "id": "5811f09e-b9d5-4349-9710-d147e1aac559",
+            "name": "Arnold",
+            "species": "cat",
+            "breed": "British shorthair"
+        },
+        {
+            "id": "4f3b7fa2-680a-431a-9e0a-cf88e03129e1",
+            "name": "Sully",
+            "species": "snake",
+            "breed": "Ball python"
+        },
+        {
+            "id": "fc960f17-cb96-4b0d-8664-16a48583447f",
+            "name": "Pilot",
+            "species": "bird",
+            "breed": "Goffin's Cockatoo"
+        },
+        {
+            "id": "af6c9f50-a162-4d30-b65d-5e07e30df5b7",
+            "name": "Hershey",
+            "species": "dog",
+            "breed": "Dachsund"
+        },
+        {
+            "id": "27694f70-d4f4-4c38-acb8-1824d6cfda9c",
+            "name": "Izzy",
+            "species": "cat",
+            "breed": "Unknown"
+        },
+        {
+            "id": "d9838fa1-183c-4d3f-b010-3bf5c88e1e88",
+            "name": "Sunny",
+            "species": "bird",
+            "breed": "Sun Conure"
+        },
+        {
+            "id": "79ec45dc-8d9d-49c9-95fe-382f0073c00e",
+            "name": "Michaelangelo",
+            "species": "turtle",
+            "breed": ""
+        },
+        {
+            "id": "0b09c339-0d49-4f96-b856-f9a53046aa40",
+            "name": "Omar",
+            "species": "bird",
+            "breed": "African Grey"
+        }
+    ]
+}

@@ -1,0 +1,181 @@
+{
+  "Pets": [
+    {
+      "PutRequest": {
+        "Item": {
+          "Id": {
+            "S": "7c041612-0ea9-43b2-ad7c-87d63bef33ce"
+          },
+          "Name": {
+            "S": "Marcel"
+          },
+          "Species": {
+            "S": "dog"
+          },
+          "Breed": {
+            "S": "French bulldog"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "Id": {
+            "S": "55677748-07ae-4926-afdf-4fbc66b868b3"
+          },
+          "Name": {
+            "S": "Duncan"
+          },
+          "Species": {
+            "S": "dog"
+          },
+          "Breed": {
+            "S": "West Highland Terrier"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "Id": {
+            "S": "5811f09e-b9d5-4349-9710-d147e1aac559"
+          },
+          "Name": {
+            "S": "Arnold"
+          },
+          "Species": {
+            "S": "cat"
+          },
+          "Breed": {
+            "S": "British shorthair"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "Id": {
+            "S": "4f3b7fa2-680a-431a-9e0a-cf88e03129e1"
+          },
+          "Name": {
+            "S": "Sully"
+          },
+          "Species": {
+            "S": "snake"
+          },
+          "Breed": {
+            "S": "Ball python"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "Id": {
+            "S": "fc960f17-cb96-4b0d-8664-16a48583447f"
+          },
+          "Name": {
+            "S": "Pilot"
+          },
+          "Species": {
+            "S": "bird"
+          },
+          "Breed": {
+            "S": "Goffin's Cockatoo"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "Id": {
+            "S": "af6c9f50-a162-4d30-b65d-5e07e30df5b7"
+          },
+          "Name": {
+            "S": "Hershey"
+          },
+          "Species": {
+            "S": "dog"
+          },
+          "Breed": {
+            "S": "Dachshund"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "Id": {
+            "S": "27694f70-d4f4-4c38-acb8-1824d6cfda9c"
+          },
+          "Name": {
+            "S": "Izzy"
+          },
+          "Species": {
+            "S": "cat"
+          },
+          "Breed": {
+            "S": "Unknown"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "Id": {
+            "S": "d9838fa1-183c-4d3f-b010-3bf5c88e1e88"
+          },
+          "Name": {
+            "S": "Sunny"
+          },
+          "Species": {
+            "S": "bird"
+          },
+          "Breed": {
+            "S": "Sun Conure"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "Id": {
+            "S": "79ec45dc-8d9d-49c9-95fe-382f0073c00e"
+          },
+          "Name": {
+            "S": "Michaelangelo"
+          },
+          "Species": {
+            "S": "turtle"
+          }
+        }
+      }
+    },
+    {
+      "PutRequest": {
+        "Item": {
+          "Id": {
+            "S": "0b09c339-0d49-4f96-b856-f9a53046aa40"
+          },
+          "Name": {
+            "S": "Omar"
+          },
+          "Species": {
+            "S": "bird"
+          },
+          "Breed": {
+            "S": "African Grey"
+          }
+        }
+      }
+    }
+  ]
+}
