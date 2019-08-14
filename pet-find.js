@@ -10,26 +10,24 @@ const documentClient = new AWS.DynamoDB.DocumentClient();
 exports.handler = (event, context, callback) => {
     console.log('entered get-pet with queryStringParameters ' + JSON.stringify(event.queryStringParameters));
     var searchName = event.queryStringParameters.name;
-    console.log('searchName = ' + searchName);
 
     var params = {
         TableName: 'Pets',
         FilterExpression: "#n = :searchName",
-        ExpressionAttributeName: {
+        ExpressionAttributeNames: {
             "#n": "Name"
         },
         ExpressionAttributeValues: {
             ":searchName": searchName
-        },
-        Limit: 5
+        }
     };
     console.log(params);
 
     // Call DynamoDB to read the item from the table
-    documentClient.scan(params, function(err, data) {
+    documentClient.scan(params, function (err, data) {
         let response;
         if (err) {
-            response =  getErrorResponse(event, err)
+            response = getErrorResponse(event, err)
         }
         else {
             response = getSuccessResponse(data);
