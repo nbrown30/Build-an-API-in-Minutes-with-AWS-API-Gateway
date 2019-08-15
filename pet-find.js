@@ -1,6 +1,6 @@
 'use strict';
 const AWS = require('aws-sdk');
-// Set the region
+// Set the region 
 AWS.config.update({ region: 'us-east-2' });
 
 // Create the DynamoDB service object
@@ -10,22 +10,55 @@ const documentClient = new AWS.DynamoDB.DocumentClient();
 exports.handler = (event, context, callback) => {
     console.log('entered get-pet with queryStringParameters ' + JSON.stringify(event.queryStringParameters));
     var searchName = event.queryStringParameters.name;
+    var speciesName = event.queryStringParameters.species;
 
-    var params = {
+    if (searchName) {
+        scanForPetByName(searchName, event, callback);
+    }
+    else {
+        queryForPetsBySpecies(speciesName, event, callback);
+    }
+};
+
+function scanForPetByName(searchName, event, callback) {
+    let params = {
         TableName: 'Pets',
-        FilterExpression: "#n = :searchName",
+        FilterExpression: '#n = :searchName',
         ExpressionAttributeNames: {
-            "#n": "Name"
+            '#n': 'Name'
         },
         ExpressionAttributeValues: {
-            ":searchName": searchName
+            ':searchName': searchName
         }
     };
     console.log(params);
 
     // Call DynamoDB to read the item from the table
-    documentClient.scan(params, function (err, data) {
-        let response;
+    documentClient.scan(params, function(err, data) {
+        var response;
+        if (err) {
+            response = getErrorResponse(event, err)
+        }
+        else {
+            response = getSuccessResponse(data.Items);
+        }
+
+        callback(null, response);
+    });
+}
+
+function queryForPetsBySpecies(speciesName, event, callback) {
+    let params = {
+        TableName: 'Pets',
+        IndexName: 'Species-Breed-index',
+        KeyConditionExpression: 'Species = :speciesName',
+        ExpressionAttributeValues: {
+            ":speciesName": speciesName
+        }
+    };
+
+    documentClient.query(params, function(err, data) {
+        var response;
         if (err) {
             response = getErrorResponse(event, err)
         }
@@ -35,7 +68,7 @@ exports.handler = (event, context, callback) => {
 
         callback(null, response);
     });
-};
+}
 
 function getSuccessResponse(data) {
     var response = {
